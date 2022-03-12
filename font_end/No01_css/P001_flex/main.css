@@ -1,0 +1,45 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+.flexContainer {
+    margin: 20px auto;
+    /*设置为flex布局*/
+    display: flex;
+    background-color: #ccc;
+    width: 300px;
+    height: 300px;
+    /*item在主轴方向上的对齐方式*/
+    justify-content: flex-start;
+    /*是否换行*/
+    flex-wrap: wrap;
+    /*每个容器中的交叉轴方向上的对齐方式*/
+    align-items: flex-start;
+    /*把多行(多个容器)当成一个整体，然后设置这个整体在大容器中的交叉轴方向上的对齐方式*/
+    align-content: center;
+
+
+}
+.flexContainer > * {
+    width: 50px;
+    height: 50px;
+    background-color: #000;
+    margin: 5px;
+}
+.item1 {
+    /*只有这个元素的交叉轴对齐方式不一样*/
+    align-self: flex-end;
+    height: 30px;
+}
+.item3 {
+    height: 80px;
+}
+.item6 {
+    flex: auto;
+    height: 20px;
+}
+.item7 {
+    /*排序顺序*/
+    order: 1;
+    height: 80px;
+}
